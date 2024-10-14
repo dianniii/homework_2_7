@@ -1,0 +1,48 @@
+/* футер */
+.footer {
+  width: 100%; /* Занимает всю ширину страницы */
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Сетка для внутренних блоков */
+  grid-template-rows: 1fr;
+  background-color: #45A3DF; /* Цвет фона */
+  color: white;
+  box-sizing: border-box; 
+  margin-bottom: 200px;
+}
+footer {
+  width: 100%;
+  background-color: #45A3DF; /* Синий фон */
+  color: white;
+  height: auto;
+  box-sizing: border-box; 
+  max-width: 1440px;
+  padding: 2rem 5%;
+}
+.section1,
+.section2,
+.section3,
+.section4{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item_footer,
+.item_footer_2,
+.item_footer_3,
+.item_footer_4 {
+  color: #154473;
+  width: auto;
+}
+.item_footer{
+  margin: 0;
+}
+.logo{
+  padding-right: 30px;
+  margin: auto;
+}

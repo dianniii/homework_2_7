@@ -1,0 +1,258 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+  width: 100%;
+}
+/* боди шрифт */
+/* body{
+  display: grid;
+} */
+ body{
+  width: 100%;
+ }
+ header{
+  width: 100%;
+ }
+.header {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section_header_1{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  padding: 2rem 5%;
+  /* под вопросом */
+  border: 1px solid black;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  border: 1px solid black;
+  font-size: 1rem;
+  width: 100%;
+}
+.link{
+  text-align: center;
+  margin: auto;
+  color:  #585858;
+}
+.link_{
+  text-align: center;
+  margin: auto 20px;
+  color:  #F68738;
+  padding: 1rem;
+  /* или авто */
+}
+/* второй секшн */
+.section_header_2{
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: ; */
+  width: 100%;
+  border: 1px solid black;
+  /* padding: 100px 100px; */
+  padding: 5%;
+}
+h1{
+  font-size: 2rem;
+  color: #303030;
+  font-weight: bold;
+}
+.color{
+  color: #47A7E3;
+}
+.text{
+  color: #585858;
+  /* margin: 20px 0; */
+  margin: 1rem 0;
+}
+.color2{
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.banner_2{
+  background-image: url(../images/Ресурс\ 1\ 1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: contain;
+  object-fit: contain;
+  order: 1;
+}
+.tochki{
+  padding-bottom: 50px;
+}
+.bth{
+  width: 100%;
+  max-width: 300px;
+  /* padding: 20px; */
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: #FFA96B;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* мейн */
+.block-main{
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+.subtitle{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #316594;
+  margin-top: 20px;
+}
+.list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* padding: 50px 100px; */
+  padding: 5%;
+  width: 100%;
+}
+
+.item{
+  width: 100%;
+}
+/* решение */
+
+/* футер */
+footer{
+  width: 100%;
+}
+.footer{
+  width: auto;
+  height: 90vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  padding: 50px 100px;
+  background-color: #45A3DF;
+  color: white;
+}
+.section1,
+.section2,
+.section3,
+.section4{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item_footer,
+.item_footer_2,
+.item_footer_3,
+.item_footer_4 {
+  color: #154473;
+  width: auto;
+}
+.item_footer{
+  margin: 0;
+}
+.logo{
+  padding-right: 30px;
+  margin: auto;
+}
+
+
+/* мини футер */
+.hover-text span {
+  display: inline-block;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.hover-text{
+  padding: 30px 100px;
+}
+.hover-text span:hover {
+  color: rgb(113, 77, 223); /* Цвет подсветки */
+}
+.footer_block{
+  width: 100%;
+  height: 10vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  flex-direction: column;
+}
+/* бургер нава */
+.nav_burger{
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #45A3DF;
+  justify-content: center;
+}
+
+@media screen and (max-width: 420px){
+  .header{
+    width: 100%;
+  }
+  .link,
+  .link_ {
+    display: none;
+  }
+  .nav_burger{
+    display: flex;
+    
+  }
+  .nav{
+    width: 15%;
+  }
+  .tochki{
+    display: none;
+  }
+  .section_header_1{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .section_header_2{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+  }
+  .banner_2 {
+    grid-column: 1 / -1;
+    width: auto;
+    object-fit: contain;
+    object-fit: cover;
+  }
+  .banner_1 {
+    grid-column: 1 / -1;
+    order: 2;
+  }
+
+}
